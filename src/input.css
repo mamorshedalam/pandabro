@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .x-container {
+    @apply xxl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:px-5 px-3 mx-auto;
+  }
+  .x-btn {
+    @apply bg-gradient-to-r from-amber-500 to-amber-400 text-white/75 font-medium rounded-md py-1.5 px-6 hover:text-white/100;
+  }
+  .x-animation {
+    @apply transition-all duration-300 ease-out;
+  }
+  .x-animation-fade {
+    @apply transition-opacity duration-150 ease-linear;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-stone-950 text-white;
+  }
+
+  section {
+    @apply relative;
+  }
+
+  a,
+  button {
+    @apply inline-block cursor-pointer;
+  }
+
+  img {
+    @apply w-full align-middle;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply outline-none bg-transparent;
+  }
+
+  p {
+    @apply opacity-75;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-kanit tracking-wider;
+  }
+
+  a,
+  button,
+  span,
+  p,
+  i,
+  input,
+  select,
+  textarea,
+  li,
+  ul,
+  img,
+  svg,
+  label,
+  svg path,
+  tr,
+  td,
+  *::after,
+  *::before,
+  .transition-3,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+@layer utilities {
+}

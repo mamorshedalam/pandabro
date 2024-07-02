@@ -1,0 +1,20 @@
+{
+  "name": "pandaBro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "Morshed Alam",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

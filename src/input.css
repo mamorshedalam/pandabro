@@ -19,7 +19,7 @@
 
 @layer base {
   body {
-    @apply bg-stone-950 text-white;
+    @apply bg-black text-white;
   }
 
   section {

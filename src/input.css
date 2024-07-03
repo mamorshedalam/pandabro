@@ -19,7 +19,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white xs:text-base text-sm;
   }
 
   section {

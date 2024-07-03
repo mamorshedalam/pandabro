@@ -9,7 +9,7 @@ module.exports = {
       mono: ["ui-monospace", "SFMono-Regular"],
     },
     screens: {
-      xs: "420px",
+      xs: "480px",
       sm: "640px",
       md: "768px",
       lg: "1024px",

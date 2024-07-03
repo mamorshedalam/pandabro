@@ -21,28 +21,30 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-cloak>
-     <header class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm bg-stone-950/70 z-[999]">
+<body x-data="{sidebar : false}" x-cloak>
+     <header :class="sidebar ? 'bg-black':'bg-black/70'" class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm z-[999] x-animation">
           <div class="x-container">
                <div class="flex flex-wrap items-center w-full py-2">
-                    <nav class="md:block hidden basis-0 flex-grow font-medium">
-                         <a href="" class="opacity-70 lg:p-6 p-4 pl-0 hover:opacity-100">Getting Started</a>
-                         <a href="" class="opacity-70 lg:p-6 p-4 pl-0 hover:opacity-100">Feature</a>
-                         <a href="" class="opacity-70 lg:p-6 p-4 pl-0 hover:opacity-100">Roadmap</a>
-                         <a href="" class="opacity-70 lg:p-6 p-4 pl-0 hover:opacity-100">Tutorial</a>
-                         <a href="" class="opacity-70 lg:p-6 p-4 pl-0 hover:opacity-100">Whitepaper</a>
+                    <nav x-cloak
+                         :class="sidebar ? 'absolute top-full left-0 w-full max-h-80 opacity-100 visible flex flex-col text-center bg-stone-950': 'md:max-h-80 md:opacity-100 md:visible max-h-0 opacity-0 invisible'"
+                         class="md:w-0 md:flex-grow font-medium x-animation-fade">
+                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Getting Started</a>
+                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Feature</a>
+                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Roadmap</a>
+                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Tutorial</a>
+                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Whitepaper</a>
                     </nav>
                     <a href="" class="x-btn">Start</a>
-                    <button class="md:hidden block basis-0 flex-grow text-right text-xl"><i class="fa-solid fa-bars"></i></button>
+                    <button @click="sidebar = !sidebar" class="md:hidden block basis-0 flex-grow text-right text-xl"><i class="fa-solid fa-bars"></i></button>
                </div>
           </div>
      </header>
 
-     <section class="lg:pt-32 sm:py-20 py-10">
+     <section class="lg:pt-32 sm:pt-24 pt-16 sm:pb-20 pb-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center justify-between">
                     <div class="xl:w-1/2 lg:w-3/5 w-full lg:text-left text-center lg:order-1 order-2">
-                         <h1 class="x-glitch xxl:text-7xl lg:text-6xl md:text-5xl xs:text-4xl text-2xl mb-4">PandaBRO: Your investment, our technology</h1>
+                         <h1 class="x-glitch xxl:text-7xl lg:text-6xl md:text-5xl xs:text-4xl text-3xl mb-4">PandaBRO: Your investment, our technology</h1>
                          <p>Your all-in-one crypto ecosystem. Buying, Sniping, Trading, and of course, Meme-ing, all under one hub - everything you need with PandaBRO</p>
                     </div>
                     <div class="lg:w-2/5 w-2/3 mx-auto lg:order-2 order-1">
@@ -55,72 +57,76 @@
           </div>
      </section>
 
-     <section class="grid grid-cols-6 gap-2.5">
-          <a href="https://t.me/pandabro_portal" target="_blank" class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-brands fa-telegram"></i></div>
-               <div class="text-sm font-medium">
+     <section class="grid lg:grid-cols-6 sm:grid-cols-3 grid-cols-2 xs:gap-y-6 gap-y-4">
+          <a href="https://t.me/pandabro_portal" target="_blank" class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-brands fa-telegram"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
                     <p class="opacity-100">TELEGRAM</p>
                </div>
           </a>
 
-          <a class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-solid fa-globe"></i></div>
-               <div class="text-sm font-medium">
-                    <span class="x-btn py-0.5 px-2 text-xs">soon</span>
+          <a class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-solid fa-globe"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
+                    <span class="x-btn py-0.5 px-2 xs:text-xs text-[0.5rem]">soon</span>
                     <p class="opacity-100 mt-0.5">PANDABRO TRADEHUB</p>
                </div>
           </a>
 
-          <a class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-solid fa-rocket"></i></div>
-               <div class="text-sm font-medium">
-                    <span class="x-btn py-0.5 px-2 text-xs">soon</span>
+          <a class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-solid fa-rocket"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
+                    <span class="x-btn py-0.5 px-2 xs:text-xs text-[0.5rem]">soon</span>
                     <p class="opacity-100 mt-0.5">PANDABRO LAUNCHPADS</p>
                </div>
           </a>
 
-          <a class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-brands fa-app-store"></i></div>
-               <div class="text-sm font-medium">
-                    <span class="x-btn py-0.5 px-2 text-xs">soon</span>
+          <a class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-brands fa-app-store"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
+                    <span class="x-btn py-0.5 px-2 xs:text-xs text-[0.5rem]">soon</span>
                     <p class="opacity-100 mt-0.5">APP STORE</p>
                </div>
           </a>
 
-          <a class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-brands fa-google-play"></i></div>
-               <div class="text-sm font-medium">
-                    <span class="x-btn py-0.5 px-2 text-xs">soon</span>
+          <a class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-brands fa-google-play"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
+                    <span class="x-btn py-0.5 px-2 xs:text-xs text-[0.5rem]">soon</span>
                     <p class="opacity-100 mt-0.5">PLAY STORE</p>
                </div>
           </a>
 
-          <a href="https://twitter.com/PandaBRO_xyz" target="_blank" class="flex justify-center items-center gap-2 hover:text-orange-400">
-               <div class="text-4xl"><i class="fa-brands fa-twitter"></i></div>
-               <div class="text-sm font-medium">
+          <a href="https://twitter.com/PandaBRO_xyz" target="_blank" class="flex sm:justify-center items-center gap-2 sm:px-0 px-2 hover:text-orange-400">
+               <div class="sm:text-4xl text-2xl"><i class="fa-brands fa-twitter"></i></div>
+               <div class="xs:text-sm text-xs font-medium">
                     <p class="opacity-100">X</p>
                </div>
           </a>
      </section>
 
-     <section class="py-20">
+     <section class="sm:py-20 py-10">
           <div class="x-container">
                <div class="flex flex-wrap w-full justify-between items-center bg-gradient-to-r from-orange-500 to-orange-400 rounded-md overflow-hidden">
-                    <div class="w-2/3 px-20">
-                         <h2 class="text-4xl uppercase mb-6">PANDA BRO</h2>
-                         <p class="text-lg">Hey, my name is Bro, and I am a panda. I am not a normal panda though, I am not lazy nor am I clumsy. In fact, I am very active and smart. I am here to help
+                    <div class="md:w-2/3 w-full xl:px-20 xs:p-6 p-4">
+                         <h2 class="md:text-4xl text-2xl uppercase md:mb-6 xs:mb-4 mb-2">PANDA BRO</h2>
+                         <p class="lg:text-lg">Hey, my name is Bro, and I am a panda. I am not a normal panda though, I am not lazy nor am I clumsy. In fact, I am very active and smart. I am here to
+                              help
                               you make money.
                               The utilities I offer is next to none in this space. Browse the website to understand the difference between me, and other meme coins.</p>
                     </div>
-                    <div class="w-1/3"><img src="assets/img/creation.png" alt="panda"></div>
+                    <div class="md:w-1/3 w-full"><img src="assets/img/creation.png" alt="panda"></div>
                </div>
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center text-center justify-between">
-                    <div class="w-2/5 flex flex-col gap-y-4">
+                    <div class="lg:w-2/5 md:w-1/2 w-2/3 mx-auto">
+                         <img src="assets/img/pnda.gif" alt="">
+                    </div>
+                    <div class="md:w-2/5 w-full flex flex-col sm:gap-y-4 gap-y-2">
                          <a href="" class="x-btn">Presale</a>
                          <a href="" class="x-btn">How to buy</a>
                          <a href="" class="x-btn">Chart</a>
@@ -128,79 +134,80 @@
                          <a href="" class="x-btn">KYC</a>
                          <a href="" class="x-btn">Audit</a>
                     </div>
-                    <div class="w-2/5">
-                         <img src="assets/img/pnda.gif" alt="">
-                    </div>
                </div>
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
-               <div class="grid grid-cols-3 gap-x-6 gap-y-4">
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">PandaBRO Sniper Bot</h3>
+               <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-6 gap-4">
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">PandaBRO Sniper Bot</h3>
                          <p class="basis-0 flex-grow">Elevate your trading game with the PandaBRO Telegram Bot – your intelligent companion in the world of finance. Enhance your gains, execute trades
                               swiftly, seize opportunities early, and monitor real-time profits.</p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">PandaBRO Trade Hub</h3>
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">PandaBRO Trade Hub</h3>
                          <p class="basis-0 flex-grow">BRO Trade Hub is a cutting-edge trading ecosystem, blending AI insights, one-click trading, and community wisdom. It is designed for seamless
                               crypto transactions, offering users a dynamic platform for smart, secure, and community-driven trading experiences. Welcome to the future of crypto trading.</p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">Dashboards</h3>
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">Dashboards</h3>
                          <p class="basis-0 flex-grow">Token holders can seize a portion of revenue by utilizing this dashboard. Furthermore, you have the option to generate a referral link and collect
                               rewards for successful referrals.</p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">PandaBRO Launchpads</h3>
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">PandaBRO Launchpads</h3>
                          <p class="basis-0 flex-grow">Step into the world launchpads, where the future of crypto takes flight. It's not just a platform; it's your golden ticket to the most exciting,
                               up-and-coming crypto projects. Imagine getting first dibs on the next big thing in the crypto universe. With PandaBRO Launchpad, that's exactly what you get—a front-row
                               seat to innovation and the chance to grow with the giants of tomorrow. Join us, and let's discover the potential together. </p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">Trading Pools</h3>
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">Trading Pools</h3>
                          <p class="basis-0 flex-grow">One of the core utilities of PandaBRO is the ability to allow investors to invest or stake their $BRO, $USDT or $USDC for a specific amount of
                               time and get the agreed-on ROI. Trading pools are generated everyday depending on the supply and demand, and they are limited to use. Only NFT or $BRO holders will be
                               eligible to use our pools. Different NFTs allow access to different pool tiers, generating up to 160% ROI in 14 days (60% net profit). More details will be announced post
                               launch.</p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
-                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-2xl mb-2">PandaBRO NFTs</h3>
+                    <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-2xl text-xl sm:mb-2 mb-1">PandaBRO NFTs</h3>
                          <p class="basis-0 flex-grow">Owning a PandaBRO NFT is a luxury leveraging the unique opportunities within the digital asset ecosystem. Not everyone will get to own one due to
                               the limited supply, as only 1000 NFTs will ever be minted. The model is simple, there are only 3 different types of NFTs. All of them provide access to our trading pools,
                               but each tier provides customers with different ROI. More details will be announced post launch.</p>
-                         <button class="x-btn w-fit mt-9">Soon</button>
+                         <button class="x-btn w-fit lg:mt-9 sm:mt-6 mt-4">Soon</button>
                     </div>
                </div>
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
-               <h2 class="text-4xl mb-6">Features within our utilities </h2>
-               <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-stone-800/30 border border-stone-800 px-3 py-5 rounded-md">
-                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider text-lg mb-6"><img class="w-6" src="assets/img/icon/rocket-48.png">Prime Signals</h3>
+               <h2 class="sm:text-4xl xs:text-2xl text-xl sm:mb-6 mb-4">Features within our utilities </h2>
+               <div class="grid xs:grid-cols-2 grid-cols-1 gap-4">
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-3 px-2 sm:py-5 py-3 rounded-md">
+                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider sm:text-lg text-base sm:mb-6 mb-3"><img class="w-6" src="assets/img/icon/rocket-48.png">Prime
+                              Signals</h3>
                          <p>Our core promise is delivering the best trading signals in the industry. We're not just another trading bot; we are THE benchmark when it comes to accurate and timely
                               signals.</p>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-3 py-5 rounded-md">
-                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider text-lg mb-6"><img class="w-6" src="assets/img/icon/bullseye-48.png">Auto Sniping</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-3 px-2 sm:py-5 py-3 rounded-md">
+                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider sm:text-lg text-base sm:mb-6 mb-3"><img class="w-6" src="assets/img/icon/bullseye-48.png">Auto
+                              Sniping</h3>
                          <p>With our advanced algorithms, snipe new tokens the moment they hit the market, ensuring you're always ahead of the crowd.</p>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-3 py-5 rounded-md">
-                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider text-lg mb-6"><img class="w-6" src="assets/img/icon/briefcase-48.png">PandaBRO Swift Swaps</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-3 px-2 sm:py-5 py-3 rounded-md">
+                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider sm:text-lg text-base sm:mb-6 mb-3"><img class="w-6"
+                                   src="assets/img/icon/briefcase-48.png">PandaBRO Swift Swaps</h3>
                          <p>Where security meets speed, ensuring your transactions are not just rapid but also shielded from potential attacks, making every swap a winning move for you.</p>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-3 py-5 rounded-md">
-                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider text-lg mb-6"><img class="w-6" src="assets/img/icon/setting-48.png">Limit Orders Perfected</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-3 px-2 sm:py-5 py-3 rounded-md">
+                         <h3 class="flex flex-wrap items-center gap-2 font-sans font-bold tracking-wider sm:text-lg text-base sm:mb-6 mb-3"><img class="w-6" src="assets/img/icon/setting-48.png">Limit
+                              Orders Perfected</h3>
                          <p>Set your buy and sell limits with precision:</p>
                          <ul class="opacity-75 list-disc ml-4">
                               <li>Buy Limits: Decide how much Sol/ETH to spend with adjustable slippage.</li>
@@ -211,10 +218,10 @@
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center justify-between">
-                    <ul class="w-1/2 space-y-2.5 text-lg font-medium">
+                    <ul class="md:w-1/2 w-full space-y-2.5 sm:text-lg font-medium md:order-1 order-2 md:mt-0 mt-6">
                          <li><span class="text-orange-500">10,000,000</span> <span>Total Supply</span></li>
                          <li><span class="text-orange-500">40%</span> <span>Presale</span></li>
                          <li><span class="text-orange-500">20%</span> <span>Liquidity</span></li>
@@ -225,70 +232,71 @@
                          <li><span class="text-orange-500">5%</span> <span>Trading Pools ROI</span></li>
                          <li><span class="text-orange-500">5%</span> <span>Rewards</span></li>
                     </ul>
-                    <div class="w-2/5">
+                    <div class="xl:w-2/5 md:w-1/2 w-full md:order-2 order-1">
                          <canvas id="myChart"></canvas>
                     </div>
                </div>
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
-               <h2 class="text-center text-4xl mb-6">Roadmap</h2>
-               <div class="grid grid-cols-2 gap-x-6 gap-y-4">
-                    <div class="bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-xl font-sans font-bold mb-4">Phase 1 - Stage Earlv</h3>
+               <h2 class="text-center sm:text-4xl text-2xl sm:mb-6 mb-4">Roadmap</h2>
+               <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-x-6 gap-4">
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 1 - Stage Earlv</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">KYC & Audit</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">AMA with the community</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Airdrops announced</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Competition Rewards</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">KYC & Audit</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">AMA with the community</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Airdrops announced</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Competition Rewards</li>
                          </ul>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-xl font-sans font-bold mb-4">Phase 2- Presale Duration Presale</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 2- Presale Duration Presale</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Release utility 1: Sniper Bot</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Release utility 2: Signal Bot</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Announcing NFT winners</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Airdropping tokens</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release utility 1: Sniper Bot</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release utility 2: Signal Bot</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Announcing NFT winners</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Airdropping tokens</li>
                          </ul>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-xl font-sans font-bold mb-4">Phase 3- Launch week Laun</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 3- Launch week Laun</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Earn with referrals</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Launching on all Dexs</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Releasing the 3 NFT types</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Getting fast track Cexs, CMC and Coingecko listing enquiries</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Earn with referrals</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Launching on all Dexs</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing the 3 NFT types</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Getting fast track Cexs, CMC and Coingecko listing enquiries
+                              </li>
                          </ul>
                     </div>
-                    <div class="bg-stone-800/30 border border-stone-800 px-4 py-6 rounded-md">
-                         <h3 class="text-xl font-sans font-bold mb-4">Phase 4- Maturity</h3>
+                    <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
+                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 4- Maturity</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Releasing Trading Pools</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Allowing NFTs minting</li>
-                              <li class="bg-stone-600/30 border border-stone-400 py-1.5 px-2.5 text-white/75 rounded-md">Releasing other utilities etc</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing Trading Pools</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Allowing NFTs minting</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing other utilities etc</li>
                          </ul>
                     </div>
                </div>
-               <div class="text-center mt-9">
+               <div class="text-center md:mt-9 xs:mt-6 mt-4">
                     <a href="" class="x-btn">Whitepaper</a>
                </div>
           </div>
      </section>
 
-     <section class="pb-20">
+     <section class="sm:pb-20 pb-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center justify-between">
-                    <div class="w-2/5">
-                         <h3 class="text-3xl mb-6">Trade Like Never Before</h3>
+                    <div class="lg:w-2/5 md:w-1/2 w-full md:order-1 order-2">
+                         <h3 class="sm:text-3xl text-xl sm:mb-6 mb-3">Trade Like Never Before</h3>
                          <p>PandaBro isn't just another platform; it's your trading companion, your mentor in the maze of crypto. Here, you'll find PandaBro Bot, Signal Bot, an innovative Launchpad,
                               and a Trade Hub-all designed to make your trading experience as enriching as it is profitable. With PandaBro, you're not just making trades; you're embarking on a journey
                               with a friend who's got your back, every step of the way. Welcome to PandaBro, where every trade tells a story, and success is a shared journey. With PandaBro, you're not
                               following trends; you're setting them.</p>
                     </div>
-                    <div class="w-2/5">
+                    <div class="lg:w-2/5 mdw-1/2 w-2/3 mx-auto md:order-2 order-1">
                          <img src="assets/img/pnda.gif" alt="panda gif">
                     </div>
                </div>
@@ -297,33 +305,33 @@
 
      <footer class="bg-stone-950 pt-10">
           <div class="x-container">
-               <img src="assets/img/logo.png" alt="logo" class="mx-auto w-24">
-               <h3 class="text-center text-4xl">Begin a new investing era with<br><span class="text-orange-400">PandaBRO</span></h3>
-               <div class="text-center mt-4 space-x-6">
-                    <a href="https://t.me/pandabro_portal" target="_blank" class="text-2xl opacity-75 hover:opacity-100"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://twitter.com/PandaBRO_xyz" target="_blank" class="text-2xl opacity-75 hover:opacity-100"><i class="fa-brands fa-telegram"></i></a>
+               <img src="assets/img/logo.png" alt="logo" class="mx-auto md:w-24 xs:w-20 w-16">
+               <h3 class="md:max-w-screen-sm max-w-[24rem] text-center md:text-4xl xs:text-2xl text-xl mx-auto">Begin a new investing era with <span class="text-orange-400">PandaBRO</span></h3>
+               <div class="text-center mt-4 space-x-6 sm:text-2xl text-xl">
+                    <a href="https://t.me/pandabro_portal" target="_blank" class="opacity-75 hover:opacity-100"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://twitter.com/PandaBRO_xyz" target="_blank" class="opacity-75 hover:opacity-100"><i class="fa-brands fa-telegram"></i></a>
                </div>
                <p class="text-center text-xs py-4">Copyright 22024 PandaBRO. All rights reserved</p>
           </div>
      </footer>
 
      <!-- PRELOADER -->
-     <!-- <section class="preloader fixed inset-0 w-full h-full flex items-center justify-center bg-black z-[9999]">
+     <section class="preloader fixed inset-0 w-full h-full flex items-center justify-center bg-black z-[9999]">
           <video class="max-w-screen-xs w-full" autoplay loop muted>
                <source src="assets/img/GIF.gif.mp4" type="video/mp4" />
                Your browser does not support the video tag.
           </video>
-     </section> -->
+     </section>
 
      <!-- SCRIPT -->
      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
      <script>
           // PRELOADER
-          // document.addEventListener("DOMContentLoaded", function () {
-          //      setTimeout(function () {
-          //           document.querySelector(".preloader").style.display = "none";
-          //      }, 3000)
-          // });
+          document.addEventListener("DOMContentLoaded", function () {
+               setTimeout(function () {
+                    document.querySelector(".preloader").style.display = "none";
+               }, 3000)
+          });
           // CHART
           const data = {
                labels: [

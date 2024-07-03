@@ -7,7 +7,7 @@
     @apply xxl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-full lg:px-5 px-3 mx-auto;
   }
   .x-btn {
-    @apply bg-gradient-to-r from-amber-500 to-amber-400 text-white/75 font-medium rounded-md py-1.5 px-6 hover:text-white/100;
+    @apply bg-gradient-to-r from-orange-500 to-orange-400 text-white/75 font-medium rounded-md py-1.5 px-6 hover:text-white/100;
   }
   .x-animation {
     @apply transition-all duration-300 ease-out;

@@ -24,18 +24,21 @@
 <body x-data="{sidebar : false}" x-cloak>
      <header :class="sidebar ? 'bg-black':'bg-black/70'" class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm z-[999] x-animation">
           <div class="x-container">
-               <div class="flex flex-wrap items-center w-full py-2">
+               <div class="flex flex-wrap justify-between items-center w-full py-2">
+                    <a href="index.html" class="md:w-14 w-12"><img src="assets/img/logo.png" alt="logo"></a>
                     <nav x-cloak
-                         :class="sidebar ? 'absolute top-full left-0 w-full max-h-80 opacity-100 visible flex flex-col text-center bg-stone-950': 'md:max-h-80 md:opacity-100 md:visible max-h-0 opacity-0 invisible'"
-                         class="md:w-0 md:flex-grow font-medium x-animation-fade">
-                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Getting Started</a>
-                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Feature</a>
-                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Roadmap</a>
-                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Tutorial</a>
-                         <a href="" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Whitepaper</a>
+                         :class="sidebar ? 'absolute top-full left-0 w-full max-h-80 opacity-100 visible flex flex-col text-center bg-stone-950': 'md:w-fit w-0 md:max-h-80 md:opacity-100 md:visible max-h-0 opacity-0 invisible'"
+                         class="font-medium x-animation-fade">
+                         <a href="#bro" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">BRO</a>
+                         <a href="#link" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Links</a>
+                         <a href="#utilities" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Utilities</a>
+                         <a href="#BROnomics" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">BROnomics</a>
+                         <a href="#roadmap" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Roadmap</a>
+                         <a href="#NFTs" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">NFTs</a>
+                         <a href="#memes" class="opacity-70 lg:p-6 md:p-4 p-2.5 pl-0 hover:opacity-100">Memes</a>
                     </nav>
-                    <a href="" class="x-btn">Start</a>
-                    <button @click="sidebar = !sidebar" class="md:hidden block basis-0 flex-grow text-right text-xl"><i class="fa-solid fa-bars"></i></button>
+                    <a href="" class="md:block hidden x-btn">Start</a>
+                    <button @click="sidebar = !sidebar" class="md:hidden flex text-right text-xl"><i class="fa-solid fa-bars"></i></button>
                </div>
           </div>
      </header>
@@ -105,7 +108,7 @@
           </a>
      </section>
 
-     <section class="sm:py-20 py-10">
+     <section id="bro" class="sm:pt-20 pt-10">
           <div class="x-container">
                <div class="flex flex-wrap w-full justify-between items-center bg-gradient-to-r from-orange-500 to-orange-400 rounded-md overflow-hidden">
                     <div class="md:w-2/3 w-full xl:px-20 xs:p-6 p-4">
@@ -120,7 +123,7 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="link" class="sm:pt-20 pt-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center text-center justify-between">
                     <div class="lg:w-2/5 md:w-1/2 w-2/3 mx-auto">
@@ -138,7 +141,7 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="utilities" class="sm:pt-20 pt-10">
           <div class="x-container">
                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-6 gap-4">
                     <div class="flex flex-col w-full bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
@@ -185,7 +188,7 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section class="sm:pt-20 pt-10">
           <div class="x-container">
                <h2 class="sm:text-4xl xs:text-2xl text-xl sm:mb-6 mb-4">Features within our utilities </h2>
                <div class="grid xs:grid-cols-2 grid-cols-1 gap-4">
@@ -218,7 +221,7 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="BROnomics" class="sm:pt-20 pt-10">
           <div class="x-container">
                <div class="flex flex-wrap items-center justify-between">
                     <div class="md:w-1/2 w-full md:order-1 order-2 md:mt-0 mt-6">
@@ -242,44 +245,51 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="roadmap" class="sm:pt-20 pt-10">
           <div class="x-container">
                <h2 class="text-center sm:text-4xl text-2xl sm:mb-6 mb-4">Roadmap</h2>
                <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-x-6 gap-4">
                     <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
-                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 1 - Stage Earlv</h3>
+                         <h3 class="sm:text-xl text-lg font-sans font-bold uppercase sm:mb-4 mb-2">Phase 1 - Early Stage</h3>
                          <ul class="space-y-2.5">
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Website release</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Whitepaper release</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Market Incubation</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">KOLs booked</li>
                               <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">KYC & Audit</li>
                               <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">AMA with the community</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Airdrops announced</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Competition Rewards</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Invitation competition</li>
                          </ul>
                     </div>
                     <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
-                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 2- Presale Duration Presale</h3>
+                         <h3 class="sm:text-xl text-lg font-sans font-bold uppercase sm:mb-4 mb-2">Phase 2- Presale Duration</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release utility 1: Sniper Bot</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release utility 2: Signal Bot</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Announcing NFT winners</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Airdropping tokens</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Meme competition starts</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release data bot</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release nft 1</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release nft 2</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release nft 3</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Announce nft winners</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Airdrop tokens</li>
                          </ul>
                     </div>
                     <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
-                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 3- Launch week Laun</h3>
+                         <h3 class="sm:text-xl text-lg font-sans font-bold uppercase sm:mb-4 mb-2">Phase 3- Post Launch</h3>
                          <ul class="space-y-2.5">
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">NFT Minting</li>
                               <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Earn with referrals</li>
                               <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Launching on all Dexs</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing the 3 NFT types</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Getting fast track Cexs, CMC and Coingecko listing enquiries
-                              </li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Getting fast track Cexs, CMC and Coingecko listing</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Influencers/KOLs interviews</li>
                          </ul>
                     </div>
                     <div class="bg-stone-800/30 border border-stone-800 sm:px-4 px-2.5 sm:py-6 py-4 rounded-md">
-                         <h3 class="sm:text-xl text-lg font-sans font-bold sm:mb-4 mb-2">Phase 4- Maturity</h3>
+                         <h3 class="sm:text-xl text-lg font-sans font-bold uppercase sm:mb-4 mb-2">Phase 4- Maturity</h3>
                          <ul class="space-y-2.5">
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing Trading Pools</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Allowing NFTs minting</li>
-                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Releasing other utilities etc</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release of trading pools</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release of Sniper bot</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release of buy bot</li>
+                              <li class="bg-stone-600/30 border border-stone-400 sm:py-1.5 py-1 sm:px-2.5 px-1.5 text-white/75 rounded-md">Release of Revenue Share Dashboard</li>
                          </ul>
                     </div>
                </div>
@@ -289,7 +299,7 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="NFTs" class="sm:pt-20 pt-10">
           <div class="x-container">
                <div class="lg:px-12 md:px-9 sm:px-6 px-4 lg:py-9 md:py-6 sm:py-4 py-2 bg-gradient-to-r from-orange-500 to-orange-400 rounded-md">
                     <h3 class="sm:text-3xl text-xl sm:mb-6 mb-3">NFTs</h3>
@@ -308,10 +318,10 @@
           </div>
      </section>
 
-     <section class="sm:pb-20 pb-10">
+     <section id="memes" class="sm:py-20 py-10">
           <div class="x-container">
                <h3 class="sm:text-3xl text-xl sm:mb-6 mb-3">THE MEME</h3>
-               <p class="sm:mb-4 mb-2">Despite the wide attractive utilities PandaBRQ offers, it is still a meme coin!....well, a comprehensive one.</p>
+               <p class="sm:mb-4 mb-2">Despite the wide attractive utilities PandaBRO offers, it is still a meme coin!....well, a comprehensive one.</p>
                <p class="sm:mb-4 mb-2">PandaBRO will offer plenty of different meme competitions post launch. It allows
                     investors to become creative. Creating memes using Bro, the Panda, and submitting it
                     to us for a prize. You do not have to be a design guru to participate, some competitions
@@ -342,7 +352,7 @@
                     <a href="https://t.me/pandabro_portal" target="_blank" class="opacity-75 hover:opacity-100"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://twitter.com/PandaBRO_xyz" target="_blank" class="opacity-75 hover:opacity-100"><i class="fa-brands fa-telegram"></i></a>
                </div>
-               <p class="text-center text-xs py-4">Copyright 22024 PandaBRO. All rights reserved</p>
+               <p class="text-center text-xs py-4">Copyright 2024 PandaBRO. All rights reserved</p>
           </div>
      </footer>
 

@@ -784,8 +784,8 @@ a,
   margin-bottom: 1rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mt-0 {
@@ -796,6 +796,10 @@ a,
   margin-top: 0.125rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -804,8 +808,8 @@ a,
   margin-top: 1.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .flex {
@@ -822,6 +826,10 @@ a,
 
 .h-full {
   height: 100%;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .max-h-0 {
@@ -852,10 +860,6 @@ a,
   width: 66.666667%;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -863,6 +867,10 @@ a,
 
 .w-full {
   width: 100%;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-72 {
@@ -891,10 +899,6 @@ a,
 
 .basis-0 {
   flex-basis: 0px;
-}
-
-.list-disc {
-  list-style-type: disc;
 }
 
 .grid-cols-1 {
@@ -964,6 +968,12 @@ a,
   margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1020,6 +1030,11 @@ a,
 
 .to-orange-400 {
   --tw-gradient-to: #fb923c var(--tw-gradient-to-position);
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
@@ -1084,11 +1099,6 @@ a,
   padding-bottom: 0.5rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1108,6 +1118,10 @@ a,
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-center {
@@ -1136,11 +1150,6 @@ a,
   font-size: 0.5rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1154,6 +1163,11 @@ a,
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -1170,10 +1184,6 @@ a,
 
 .capitalize {
   text-transform: capitalize;
-}
-
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 
 .text-orange-400 {
@@ -1232,10 +1242,6 @@ a,
 
   .xs\:w-20 {
     width: 5rem;
-  }
-
-  .xs\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xs\:gap-y-6 {
@@ -1320,11 +1326,6 @@ a,
     padding-right: 0.625rem;
   }
 
-  .sm\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1353,11 +1354,6 @@ a,
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .sm\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
   }
 
   .sm\:py-6 {
@@ -1420,16 +1416,16 @@ a,
     margin-bottom: 1.5rem;
   }
 
+  .md\:mb-9 {
+    margin-bottom: 2.25rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
 
   .md\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .md\:mb-9 {
-    margin-bottom: 2.25rem;
   }
 
   .md\:block {

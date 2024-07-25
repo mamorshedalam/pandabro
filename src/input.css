@@ -84,4 +84,7 @@
 }
 
 @layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
 }

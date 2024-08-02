@@ -813,6 +813,14 @@ a,
   margin-top: 1.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+
 .block {
   display: block;
 }
@@ -878,6 +886,18 @@ a,
   width: 100%;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .max-w-40 {
   max-width: 10rem;
 }
@@ -900,6 +920,18 @@ a,
 
 .max-w-screen-xs {
   max-width: 480px;
+}
+
+.max-w-20 {
+  max-width: 5rem;
+}
+
+.max-w-32 {
+  max-width: 8rem;
+}
+
+.max-w-24 {
+  max-width: 6rem;
 }
 
 .flex-grow {
@@ -1557,6 +1589,10 @@ html {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
   }
 
   .md\:p-4 {

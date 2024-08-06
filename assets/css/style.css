@@ -894,6 +894,10 @@ a,
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .max-w-40 {
   max-width: 10rem;
 }
@@ -916,6 +920,10 @@ a,
 
 .max-w-screen-xs {
   max-width: 480px;
+}
+
+.max-w-60 {
+  max-width: 15rem;
 }
 
 .flex-grow {

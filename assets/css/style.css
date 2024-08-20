@@ -751,12 +751,40 @@ a,
   top: 100%;
 }
 
+.-right-3 {
+  right: -0.75rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-right-1 {
+  right: -0.25rem;
+}
+
+.-right-2 {
+  right: -0.5rem;
+}
+
 .z-\[9999\] {
   z-index: 9999;
 }
 
 .z-\[999\] {
   z-index: 999;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-\[99999\] {
+  z-index: 99999;
 }
 
 .order-1 {
@@ -821,6 +849,14 @@ a,
   margin-top: 1.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .block {
   display: block;
 }
@@ -845,6 +881,26 @@ a,
   height: 100%;
 }
 
+.h-svh {
+  height: 100svh;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -865,8 +921,8 @@ a,
   width: 33.333333%;
 }
 
-.w-12 {
-  width: 3rem;
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-16 {
@@ -894,8 +950,24 @@ a,
   width: 100%;
 }
 
-.w-14 {
-  width: 3.5rem;
+.w-svw {
+  width: 100svw;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-40 {
@@ -922,6 +994,14 @@ a,
   max-width: 480px;
 }
 
+.max-w-screen-md {
+  max-width: 768px;
+}
+
+.max-w-screen-sm {
+  max-width: 640px;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -932,6 +1012,16 @@ a,
 
 .basis-0 {
   flex-basis: 0px;
+}
+
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-1 {
@@ -1010,6 +1100,10 @@ a,
   border-radius: 0.375rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1046,6 +1140,11 @@ a,
   background-color: rgb(12 10 9 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1075,6 +1174,10 @@ a,
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1136,6 +1239,10 @@ a,
   padding-bottom: 2.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pl-0 {
   padding-left: 0px;
 }
@@ -1150,10 +1257,6 @@ a,
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -1202,6 +1305,11 @@ a,
   line-height: 1rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1234,6 +1342,20 @@ a,
 
 .text-white\/75 {
   color: rgb(255 255 255 / 0.75);
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -1303,6 +1425,10 @@ html {
 }
 
 @media (min-width: 480px) {
+  .xs\:-right-3 {
+    right: -0.75rem;
+  }
+
   .xs\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1315,8 +1441,16 @@ html {
     margin-top: 2.25rem;
   }
 
+  .xs\:h-8 {
+    height: 2rem;
+  }
+
   .xs\:w-20 {
     width: 5rem;
+  }
+
+  .xs\:w-8 {
+    width: 2rem;
   }
 
   .xs\:gap-y-6 {
@@ -1350,6 +1484,11 @@ html {
   .xs\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1540,16 +1679,16 @@ html {
     width: 33.333333%;
   }
 
-  .md\:w-14 {
-    width: 3.5rem;
-  }
-
   .md\:w-2\/3 {
     width: 66.666667%;
   }
 
   .md\:w-2\/5 {
     width: 40%;
+  }
+
+  .md\:w-20 {
+    width: 5rem;
   }
 
   .md\:w-24 {
@@ -1559,10 +1698,6 @@ html {
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .md\:w-20 {
-    width: 5rem;
   }
 
   .md\:max-w-screen-sm {

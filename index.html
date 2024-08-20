@@ -23,8 +23,8 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-data="{sidebar : false}" x-cloak>
-     <header :class="sidebar ? 'bg-black':'bg-black/70'" class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm z-[999] x-animation">
+<body x-cloak x-data="{sidebar : false, buy: false}">
+     <header x-cloak :class="sidebar ? 'bg-black':'bg-black/70'" class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm z-[999] x-animation">
           <div class="x-container">
                <div class="flex flex-wrap justify-between items-center w-full pb-2">
                     <a href="index.html" class="md:w-20 w-14"><img src="assets/img/logo.png" alt="logo"></a>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="md:w-2/5 w-full flex flex-col sm:gap-y-4 gap-y-2">
                          <a href="https://www.pinksale.finance/launchpad/ethereum/0xB0bF9b28d7aB607bE25F8d225b7851fcF1904451" target="_blank" class="x-btn">Presale</a>
-                         <button class="x-btn">How to buy - Soon</button>
+                         <button @click="buy=true" class="x-btn">How to buy</button>
                          <button class="x-btn">Chart - Soon</button>
                          <a href="https://pandabro.gitbook.io/pandabro" target="_blank" class="x-btn">Whitepaper</a>
                          <a href="https://github.com/solidproof/Projects/tree/main/2024/PandaBro" target="_blank" class="x-btn">KYC</a>
@@ -449,11 +449,40 @@
      </footer>
 
      <!-- PRELOADER -->
-     <section class="preloader fixed inset-0 w-full h-full flex items-center justify-center bg-black z-[9999]">
+     <section class="preloader fixed inset-0 w-full h-full flex items-center justify-center bg-black z-[99999]">
           <video class="max-w-screen-xs w-full" autoplay loop muted>
                <source src="assets/img/GIF.gif.mp4" type="video/mp4" />
                Your browser does not support the video tag.
           </video>
+     </section>
+
+     <!-- POP UP -->
+     <section x-cloak :class="buy?'opacity-100 visible':'opacity-0 invisible'" class="fixed inset-0 w-svw h-svh z-[9999] bg-black/70 backdrop-blur-sm px-2.5 x-animation">
+          <div @click="buy=false" class="absolute inset-0 w-full h-full z-0"></div>
+          <div class="relative max-w-screen-sm w-full mx-auto mt-20 bg-gradient-to-r from-orange-500 to-orange-400 rounded-md xs:p-6 p-4 z-10">
+               <button @click="buy=false"
+                    class="absolute -top-2 xs:-right-3 -right-2 flex items-center justify-center xs:w-8 w-6 xs:h-8 h-6 xs:text-2xl text-lg rotate-45 rounded-full bg-white text-black font-medium">+</button>
+               <p class="xs:text-lg text-base font-medium opacity-100">If you are buying into our presale, then follow the instructions below:</p>
+               <ul class="xs:mb-4 mb-2">
+                    <li>1. Download MetaMask on your phone or browser.</li>
+                    <li>2. Purchase or bridge $ETH from an exchange or <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a>.</li>
+                    <li>3. Send it to your MetaMask wallet.</li>
+                    <li>4. Go on our <a href="https://www.pinksale.finance/launchpad/ethereum/0xB0bF9b28d7aB607bE25F8d225b7851fcF1904451" class="underline italic">PinkSale link</a>.</li>
+                    <li>5. Connect your MetaMask wallet.</li>
+                    <li>6. Insert the amount of ETH you want to contribute and click "Buy with ETH".</li>
+               </ul>
+               <p class="xs:text-lg text-base font-medium opacity-100">If you are buying <span class="font-bold">$BRO</span> post launch, then follow the instructions below:</p>
+               <ul class="xs:mb-4 mb-2">
+                    <li>1. Download MetaMask on your phone or browser.</li>
+                    <li>2. Purchase or bridge $ETH from an exchange or <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a>.</li>
+                    <li>3. Send it to your MetaMask wallet.</li>
+                    <li>4. Go on <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a> and exchange your $ETH/$USDT to $BRO - Use the following CA to locate $BRO on Uniswap:
+                         <span class="italic">0xE146aAe98796db2e29Ae1881978E070D80EbDAac</span>
+                    </li>
+               </ul>
+               <p class="italic opacity-100">You will also be able to buy <span class="font-medium">$BRO</span> on a wide variety of centralised exchanges soon.
+               </p>
+          </div>
      </section>
 
      <!-- SCRIPT LINKS -->

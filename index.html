@@ -23,7 +23,7 @@
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body x-cloak x-data="{sidebar : false, buy: false}">
+<body x-cloak x-data="{sidebar : false, buy: false     }">
      <header x-cloak :class="sidebar ? 'bg-black':'bg-black/70'" class="fixed top-0 left-0 right-0 w-full backdrop-blur-sm z-[999] x-animation">
           <div class="x-container">
                <div class="flex flex-wrap justify-between items-center w-full pb-2">
@@ -113,10 +113,9 @@
                <div class="flex flex-wrap w-full justify-between items-center bg-gradient-to-r from-orange-500 to-orange-400 rounded-md overflow-hidden">
                     <div class="md:w-2/3 w-full xl:px-20 xs:p-6 p-4">
                          <h2 class="md:text-4xl text-2xl uppercase md:mb-6 xs:mb-4 mb-2">PANDABRO</h2>
-                         <p class="lg:text-lg font-medium opacity-100">Hey, my name is Bro, and I am a panda. I live in a temperate forest on TRON. I am not a normal panda though; I am not lazy
-                              nor am I clumsy. In fact,
-                              I am very active and smart. I am here to entertain you and help you make money. The utilities I offer is next to none in this space. Browse the website to understand the
-                              difference between me, and other meme coins.</p>
+                         <p class="lg:text-lg font-medium opacity-100">Hey, my name is Bro, and I am a panda. I used to live in a temperate forest on Ethereum, but now decided to live on TRON. I am
+                              not a normal panda though; I am not lazy nor am I clumsy. In fact, I am very active and smart. I am here to entertain you and help you make money. The utilities I offer
+                              is next to none in this space. Browse the website to understand the difference between me, and other meme coins.</p>
                     </div>
                     <div class="md:w-1/3 w-full"><img src="assets/img/pandabro.png" alt="panda"></div>
                </div>
@@ -309,12 +308,13 @@
                          <h6 class="text-2xl mb-4">TRON</h6>
                          <!-- <p><b>CA: </b>0xE146aAe98796db2e29Ae1881978E070D80EbDAac</p> -->
                     </div>
-                    <div class="md:w-1/2 w-full md:order-1 order-2 md:mt-0 mt-6">
+                    <div class="md:w-fit w-full mx-auto md:scale-125 md:order-1 order-2 md:mt-0 mt-6">
                          <h3 class="sm:text-3xl text-xl uppercase sm:mb-6 mb-3">BRONOMICS</h3>
                          <ul class="space-y-2.5 sm:text-lg font-medium">
                               <li><span class="text-orange-500">1,000,000,000</span> <span>Total Supply</span></li>
                               <li><span class="text-orange-500">0%</span> <span>Tax</span></li>
                               <li><span class="text-orange-500">100%</span> <span>Liquidity Burned</span></li>
+                              <li><span class="text-orange-500">0</span> <span>team allocation</span></li>
                          </ul>
                     </div>
                     <div class="xl:w-2/5 md:w-1/2 w-full md:order-2 order-1">
@@ -456,26 +456,16 @@
           <div class="relative max-w-screen-sm w-full mx-auto mt-20 bg-gradient-to-r from-orange-500 to-orange-400 rounded-md xs:p-6 p-4 z-10">
                <button @click="buy=false"
                     class="absolute -top-2 xs:-right-3 -right-2 flex items-center justify-center xs:w-8 w-6 xs:h-8 h-6 xs:text-2xl text-lg rotate-45 rounded-full bg-white text-black font-medium">+</button>
-               <p class="xs:text-lg text-base font-medium opacity-100">If you are buying into our presale, then follow the instructions below:</p>
+               <p class="xs:text-lg text-base font-medium opacity-100">You can buy $BRO through <a href="https://sunpump.meme/home" class="underline italic">SunPump</a>:</p>
                <ul class="xs:mb-4 mb-2">
-                    <li>1. Download MetaMask on your phone or browser.</li>
-                    <li>2. Purchase or bridge $ETH from an exchange or <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a>.</li>
-                    <li>3. Send it to your MetaMask wallet.</li>
-                    <li>4. Go on our <a href="https://www.pinksale.finance/launchpad/TRON/0xB0bF9b28d7aB607bE25F8d225b7851fcF1904451" class="underline italic">PinkSale link</a>.</li>
+                    <li>1. Download TronLink wallet on your phone or browser.</li>
+                    <li>2. Purchase or bridge $TRX from an exchange or Sunswap.</li>
+                    <li>3. Send it to your TronLink wallet.</li>
+                    <li>4. Go on <a href="https://sunpump.meme/home" class="underline italic">SunPump</a> and exchange your $TRX to $BRO - Use the following CA to locate $BRO on SunPump: TBC.</li>
                     <li>5. Connect your MetaMask wallet.</li>
                     <li>6. Insert the amount of ETH you want to contribute and click "Buy with ETH".</li>
                </ul>
-               <p class="xs:text-lg text-base font-medium opacity-100">If you are buying <span class="font-bold">$BRO</span> post launch, then follow the instructions below:</p>
-               <ul class="xs:mb-4 mb-2">
-                    <li>1. Download MetaMask on your phone or browser.</li>
-                    <li>2. Purchase or bridge $ETH from an exchange or <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a>.</li>
-                    <li>3. Send it to your MetaMask wallet.</li>
-                    <li>4. Go on <a href="https://app.uniswap.org/swap" class="underline italic">Uniswap</a> and exchange your $ETH/$USDT to $BRO - Use the following CA to locate $BRO on Uniswap:
-                         <span class="italic">0xE146aAe98796db2e29Ae1881978E070D80EbDAac</span>
-                    </li>
-               </ul>
-               <p class="italic opacity-100">You will also be able to buy <span class="font-medium">$BRO</span> on a wide variety of centralised exchanges soon.
-               </p>
+               <p class="italic opacity-100">You will also be able to buy <span class="font-medium">$BRO</span> on a wide variety of centralised exchanges soon.</p>
           </div>
      </section>
 
